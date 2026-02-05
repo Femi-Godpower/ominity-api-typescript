@@ -3,7 +3,7 @@
 import { Ominity } from "@ominity/api-typescript";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
     oAuth: process.env["OMINITY_OAUTH_TOKEN"] ?? "",

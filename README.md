@@ -86,7 +86,7 @@ For supported JavaScript runtimes, please consult [RUNTIMES.md](RUNTIMES.md).
 import { Ominity } from "@ominity/api-typescript";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
   },
@@ -125,7 +125,7 @@ For example:
 import { Ominity } from "@ominity/api-typescript";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
     // oAuth: process.env["OMINITY_OAUTH_TOKEN"] ?? "",
@@ -184,7 +184,7 @@ import { Ominity } from "@ominity/api-typescript";
 import { openAsBlob } from "node:fs";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
   },
@@ -216,7 +216,7 @@ To change the default retry strategy for a single API call, simply provide a ret
 import { Ominity } from "@ominity/api-typescript";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
   },
@@ -248,7 +248,7 @@ If you'd like to override the default retry strategy for all operations that sup
 import { Ominity } from "@ominity/api-typescript";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   retryConfig: {
     strategy: "backoff",
     backoff: {
@@ -295,7 +295,7 @@ import { Ominity } from "@ominity/api-typescript";
 import * as errors from "@ominity/api-typescript/models/errors";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
     oAuth: process.env["OMINITY_OAUTH_TOKEN"] ?? "",
@@ -360,7 +360,7 @@ Each tenant runs on its own domain, so `serverURL` is required when initializing
 import { Ominity } from "@ominity/api-typescript";
 
 const ominity = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: {
     apiKey: process.env["OMINITY_API_KEY"] ?? "",
     oAuth: process.env["OMINITY_OAUTH_TOKEN"] ?? "",
@@ -424,7 +424,7 @@ httpClient.addHook("requestError", (error, request) => {
 });
 
 const sdk = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: { apiKey: process.env["OMINITY_API_KEY"] ?? "" },
   httpClient: httpClient,
 });
@@ -445,7 +445,7 @@ You can pass a logger that matches `console`'s interface as an SDK option.
 import { Ominity } from "@ominity/api-typescript";
 
 const sdk = new Ominity({
-  serverURL: "https://tenant-a.example.com/api",
+  serverURL: "https://tenant-a.ominity.com/api",
   security: { apiKey: process.env["OMINITY_API_KEY"] ?? "" },
   debugLogger: console,
 });

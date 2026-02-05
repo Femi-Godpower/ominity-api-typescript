@@ -4,14 +4,34 @@
 > This section is useful if you are using a bundler and targetting browsers and
 > runtimes where the size of an application affects performance and load times. 
 
-Standalone functions are not yet available. This SDK currently focuses on the
-class-based client and the generic `http` helper while the typed endpoints are
-being implemented.
+Standalone functions are available for the commerce products endpoints. These
+functions return a `Result<Value, Error>` instead of throwing, which makes
+error handling explicit in application code.
 
 ## Example
 
 ```typescript
-// Standalone functions will be documented here once they are introduced.
+import { OminityCore, productsGet, productsList } from "@ominity/api-typescript";
+
+const client = new OminityCore({
+  serverURL: "https://tenant-a.ominity.com/api",
+  security: {
+    apiKey: process.env["OMINITY_API_KEY"] ?? "",
+  },
+  language: "en",
+});
+
+const result = await productsList(client, { limit: 10, include: ["offers"] });
+if (result.ok) {
+  console.log(result.value.items);
+} else {
+  console.error(result.error);
+}
+
+const single = await productsGet(client, { id: 1, include: "category" });
+if (single.ok) {
+  console.log(single.value);
+}
 ```
 
 ## Result types

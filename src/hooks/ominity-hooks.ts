@@ -28,6 +28,10 @@ export class OminityHooks implements BeforeCreateRequestHook {
     headers: Headers,
     hookContext: HookContext,
   ): Headers {
+    if (!headers.has("accept")) {
+      headers.set("Accept", "application/hal+json");
+    }
+
     const language = hookContext.options.language;
     if (language && !headers.has("accept-language")) {
       headers.set("Accept-Language", language);
