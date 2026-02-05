@@ -75,10 +75,12 @@ function applyApiVersion(url: URL, apiVersion: string | undefined): URL {
   return url;
 }
 
+export const SDK_VERSION = "0.0.2";
+
 export const SDK_METADATA = {
   language: "typescript",
   openapiDocVersion: "manual",
-  sdkVersion: "0.0.1",
+  sdkVersion: SDK_VERSION,
   genVersion: "manual",
-  userAgent: "ominity-sdk/typescript 0.0.1",
+  userAgent: `ominity-sdk/typescript ${SDK_VERSION}`,
 } as const;

@@ -1,6 +1,6 @@
 {
   "name": "@ominity/api-typescript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ominity",
   "type": "module",
   "tshy": {
@@ -22,7 +22,9 @@
   "scripts": {
     "lint": "eslint --cache --max-warnings=0 src",
     "build": "tshy",
-    "prepublishOnly": "npm run build"
+    "sync-version": "node scripts/sync-version.mjs",
+    "postversion": "npm run sync-version",
+    "prepublishOnly": "npm run sync-version && npm run build"
   },
   "peerDependencies": {},
   "devDependencies": {
