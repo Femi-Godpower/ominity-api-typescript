@@ -15,3 +15,5 @@ export * from "./commerce/cartItemsGet.js";
 export * from "./commerce/cartItemsCreate.js";
 export * from "./commerce/cartItemsUpdate.js";
 export * from "./commerce/cartItemsDelete.js";
+export * from "./meGet.js";
+export * from "./users/index.js";
